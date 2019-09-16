@@ -4,15 +4,32 @@
 
 ## Advanced Class Methods
 
-?: `.all` exposes the `@@all` class variable and its data to the rest of the application.
+```
+class Dog
+  attr_accessor :name, :owner
+  
+  @@all = []
+  
+  def initialize(name)
+    @name = name
+    @@all << self
+  end
 
-(X) True ( ) False
+  def self.all
+    @@all
+  end
+end
+```
 
 ?: `self.all` is a class method for reading the data stored in the class variable `@@all`.
 
 (X) True ( ) False
 
-?: To avoid writing repetitious code every time you want to search an object, what can be done?
+?: `.all` is used to expose the `@@all` class variable and its data to the rest of the application.
+
+(X) True ( ) False
+
+?: To avoid writing repetitious code every time you want to search through an object's `@@all` variable, what can be done?
 
 ( ) Return the full list of objects using `.all` ( ) Write a SQL query ( ) Use the Ruby method `.find` (X) Encapsulate the search logic into a class method
 
