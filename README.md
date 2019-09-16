@@ -4,6 +4,8 @@
 
 ## Advanced Class Methods
 
+?: 
+
 ```
 class Dog
   attr_accessor :name, :owner
@@ -21,7 +23,7 @@ class Dog
 end
 ```
 
-?: `self.all` is a class method for reading the data stored in the class variable `@@all`.
+`self.all` is a class method for reading the data stored in the class variable `@@all`.
 
 (X) True ( ) False
 
